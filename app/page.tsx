@@ -1,65 +1,123 @@
 import Image from "next/image";
+import Link from "next/link";
+import "@/styles/home.css"
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sistema Acadêmico - Página Inicial',
+  description: '',
+};
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <header className="header">
+      <div className="container">
+        <div className="logo">
+          <Link href="/" className="logo-button">
+            <span>A+</span>
+            <strong>cademic</strong>
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Início</a>
+            </li>
+
+            <li className="has-dropdown">
+              <a href="/ensino">Ensino</a>
+
+              <div className="dropdown">
+                <a href="/minhas-disciplinas">Minhas Disciplinas</a>
+                <a href="/minhas-notas">Minhas Notas</a>
+                <a href="/meus-indices-academicos">Meus Índices Acadêmicos</a>
+                <a href="/meu-historico-academico">Meu Histórico Acadêmico</a>
+
+                <div className="dropdown-divider" />
+
+                <div className="dropdown-submenu">
+                  <span className="submenu-title">Matrícula</span>
+                  <a href="/realizar-matricula">Realizar Matrícula</a>
+                  <a href="/comprovante-matricula">Comprovante</a>
+                  <a href="/plano-matricula">Plano de Matrícula</a>
+                </div>
+              </div>
+            </li>
+
+            <li className="has-dropdown">
+              <a href="/pesquisa">Pesquisa</a>
+              <div className="dropdown">
+                <a href="/projetos-pesquisa">Projetos de Pesquisa</a>
+                <a href="/publicacoes">Publicações</a>
+                <a href="/grupos-pesquisa">Grupos de Pesquisa</a>
+              </div>
+            </li>
+
+            <li className="has-dropdown">
+              <a href="/extensao">Extensão</a>
+              <div className="dropdown">
+                <a href="/projetos-extensao">Projetos de Extensão</a>
+                <a href="/atividades-extensao">Atividades de Extensão</a>
+                <a href="/eventos-extensao">Eventos de Extensão</a>
+                <a href="/meus-relatorios">Meus Relatórios</a>
+                <a href="/certificados">Certificados e Declarações</a>
+              </div>
+            </li>
+
+            <li className="has-dropdown">
+              <a href="/biblioteca">Biblioteca</a>
+              <div className="dropdown">
+                <a href="/catalogo-online">Catálogo Online</a>
+
+                <div className="dropdown-divider" />
+
+                <div className="dropdown-submenu">
+                  <span className="submenu-title">Empréstimos</span>
+                  <a href="/visualizar-emprestimos">Visualizar Empréstimos</a>
+                  <a href="/renovar-emprestimos">Renovar Empréstimos</a>
+                  <a href="/comprovante-emprestimos">Comprovante de Empréstimos</a>
+                  <a href="/plano-emprestimos">Agendar Empréstimo</a>
+                </div>
+              </div>  
+            </li>
+
+            <li className="has-dropdown">
+              <a href="/outros">Estágios</a>
+              <div className="dropdown">
+                <a href="/noticias">Mural de Vagas</a>
+                <a href="/eventos">Gerenciar Estágios</a>
+              </div>
+            </li>
+
+            <li className="has-dropdown">
+              <a href="/outros">Outros</a>
+              <div className="dropdown">
+                <div className="dropdown-submenu">
+                  <span className="submenu-title">Coordenação de Curso</span>
+                  <a href="/atendimento-aluno">Atendimento ao Aluno</a>
+                  <a href="/pagina-curso">Página do Curso</a>
+                </div>
+
+                <div className="dropdown-divider" />
+
+                <a href="/noticias">Notícias</a>
+                <a href="/eventos">Eventos</a>
+                <a href="/eventos">Relatório de Carga Horária do Discente</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="actions">
+          <div className="user">
+            <div className="avatar">DA</div>
+              <div className="user-info">Danilo Alexandre<br/>
+              <span>Administrador</span>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </header>
   );
 }
