@@ -104,6 +104,160 @@ nav ul li a:hover {
   color: #2563eb;
 }
 
+/* ===== MAIN ===== */
+.main {
+  max-width: 1300px;
+  margin: 32px auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* ===== BEM-VINDO ===== */
+.bem-vindo {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.bem-vindo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.bem-vindo p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ===== OVERVIEW CARDS ===== */
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.card span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  margin-top: 6px;
+  color: #0f172a;
+}
+
+/* ===== GRID CENTRAL ===== */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+/* ===== DISCIPLINAS ===== */
+.disciplinas-atuais {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.disciplinas-atuais h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.disciplina {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.disciplina:last-child {
+  border-bottom: none;
+}
+
+.alerta {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.ok {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* ===== PRAZOS ===== */
+.deadlines {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.deadlines h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.deadline {
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+
+.deadline strong {
+  display: block;
+  color: #0f172a;
+}
+
+.deadline span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ===== AVISOS ===== */
+.notices {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.notices h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.notice {
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.notice:last-child {
+  border-bottom: none;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== DROPDOWN ===== */
 .dropdown {
   position: absolute;
