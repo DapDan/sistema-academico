@@ -1,4 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Academic Management System
+
+A **full-stack academic management system** developed using Next.js, focused on organizing academic data and simulating real-world system requirements.
+
+The project is under continuous development, emphasizing clean architecture and scalability.
+
+## Features
+- Academic data management (CRUD)
+- User authentication (planned / implemented)
+- Organized and modular structure
+- Responsive interface
+
+## Technologies
+- Next.js
+- TypeScript
+- JavaScript
+- API Routes
+- Database (SQL / relational)
+
+## What this project demonstrates
+- Full-stack web development
+- System design and organization
+- Real project structure beyond tutorials
+- Continuous improvement mindset
+
+## Status
+ In development — new features and improvements are being added.
+
+---
+
+This project represents practical experience in building real-world systems.
 
 ## Getting Started
 
